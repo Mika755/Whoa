@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #fff;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* -------------------------
+   Hovedcontainer
+------------------------- */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+/* -------------------------
+   Overskrift
+------------------------- */
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #ffffff;
+}
+
+h1 span {
+    color: #e50914;
+}
+
+
+/* -------------------------
+   Filmkort
+------------------------- */
+
+.filmkort {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+
+    background: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/* -------------------------
+   Filmplakat
+------------------------- */
+
+.poster {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* -------------------------
+   Informasjon
+------------------------- */
+
+.film-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.film-info h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.film-info p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.info-box {
+    background: #252525;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.info-box strong {
+    display: block;
+    color: #e50914;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.info-box span {
+    color: #fff;
+}
+
+
+/* -------------------------
+   Filmsitat
+------------------------- */
+
+.sitat {
+    margin-top: 5px;
+    padding: 15px;
+
+    background: #252525;
+    border-left: 4px solid #e50914;
+
+    border-radius: 5px;
+
+    font-style: italic;
+    color: #eee;
+}
+
+
+/* -------------------------
+   Video
+------------------------- */
+
+.video-container {
+    margin-top: 10px;
+}
+
+.video-container video {
+    width: 100%;
+    max-height: 350px;
+
+    display: block;
+
+    border-radius: 10px;
+    background: #000;
+}
+
+
+/* -------------------------
+   Knapp
+------------------------- */
+
+.ny-film {
+    display: block;
+
+    margin: 25px auto 0;
+
+    padding: 13px 28px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #e50914;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.ny-film:hover {
+    background: #ff1a25;
+    transform: translateY(-2px);
+}
+
+.ny-film:active {
+    transform: translateY(0);
+}
+
+
+/* -------------------------
+   Responsivt design
+------------------------- */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .filmkort {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .poster {
+        height: 450px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .film-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
